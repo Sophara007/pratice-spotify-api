@@ -1,0 +1,29 @@
+.search-form {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f0f0f0; /* Adding a light gray background color */
+}
+
+.search-button {
+  background-color: #61dafb;
+  color: white;
+  border: 1px gray;
+  border-radius: 0 5px 5px 0;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #4fa3c9;
+}
