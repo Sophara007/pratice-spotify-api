@@ -82,7 +82,19 @@ function App() {
 
   return (
     <>
-    <h1 style={{textAlign: "center"}}>Spotify Playlist Maker</h1>
+    <h1 style={{
+  textAlign: "center",
+  fontFamily: "Arial, sans-serif", // Choose a modern font family
+  fontSize: "2.5rem", // Adjust the font size as needed
+  fontWeight: "bold", // Make the text bold
+  color: "#1DB954", // Choose a modern color
+  textTransform: "uppercase", // Convert text to uppercase for a stylish look
+  letterSpacing: "2px", // Add letter spacing for better readability
+  margin: "20px 0", // Add some margin for spacing
+}}>
+  Spotify Playlist Maker
+</h1>
+
       <div className="search-bar">
         
         <SearchMusic onSearch={handleSearch} />
@@ -90,7 +102,8 @@ function App() {
       <main className="main-container">
   <div className="results-container">
     {/* Pass addToPlaylist function as a prop to SearchResults */}
-    <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylist} />
+    <SearchResults searchResults={searchResults} onAddToPlaylist={addToPlaylist} playlist={playlist} />
+
   </div>
   <div className="playlist-container">
     {/* Pass the playlist state, removeFromPlaylist function, and accessToken to MusicPlayList */}

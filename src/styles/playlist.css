@@ -1,0 +1,57 @@
+
+  ul {
+    list-style-type: none;
+  }
+  
+ 
+
+  .playlist-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .playlist-track .track-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .playlist-track .track-details {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .playlist-track .remove-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .playlist-track .remove-button:hover {
+    background-color: #ff7875;
+  }
+  
+  
+  .remove-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-button:hover {
+    background-color: #d32f2f;
+  }
+  

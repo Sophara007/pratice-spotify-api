@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/App.css"; // Import the updated CSS file
 
-function SearchResults({ searchResults, onAddToPlaylist }) {
+function SearchResults({ searchResults, onAddToPlaylist, playlist }) {
   // Function to handle adding a track to the playlist
   const handleAddToPlaylist = (track) => {
     onAddToPlaylist(track);
@@ -12,9 +12,19 @@ function SearchResults({ searchResults, onAddToPlaylist }) {
     return <div className="no-results">No search results</div>;
   }
 
+  // Filter out tracks already in the playlist
+  const filteredResults = searchResults.items.filter(track => {
+    return !playlist.some(item => item.id === track.id);
+  });
+
+  // Check if filteredResults is empty
+  if (!filteredResults.length) {
+    return <div className="no-results">All results already in playlist</div>;
+  }
+
   return (
     <div className="search-results">
-      {searchResults.items.map((track) => (
+      {filteredResults.map((track) => (
         <div className="track" key={track.id}>
           <img className="track-image" src={track.album.images[0].url} alt={track.name} />
           <div className="track-info">

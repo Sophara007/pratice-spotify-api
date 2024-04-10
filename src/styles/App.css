@@ -7,6 +7,11 @@
 .main-container {
   display: flex;
 }
+body {
+  background-color: #f7f7f7; /* Set a background color */
+  margin: 0; /* Remove default margin for body */
+  padding: 0; /* Remove default padding for body */
+}
 
 .results-container {
   flex: 1;
